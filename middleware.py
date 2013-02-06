@@ -8,7 +8,7 @@ from django.utils.importlib import import_module
 class UserRestrictMiddleware(object):
     def process_request(self, request):
         """
-        Checks if differents session exists for user and deletes it.
+        Checks if different session exists for user and deletes it.
         """
         if request.user.is_authenticated():
             cache = get_cache('default')
